@@ -29,3 +29,19 @@
   text-decoration: none;
   color: #777;
 }
+
+.article-title {
+  color: #337ab7;
+  text-decoration: none;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.article-content {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Roboto";
+
+
+}

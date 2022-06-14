@@ -16,13 +16,27 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def update
-    @article = Article.find(article_params[:id])
-    if @article.save
-      redirect_to articles_path
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article)
     else
-      render :new, status: :unprocessable_entity
+      render :edit
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path, status: :see_other
   end
 
   private

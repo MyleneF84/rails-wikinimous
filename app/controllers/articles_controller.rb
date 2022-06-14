@@ -8,8 +8,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(params[:article])
-    @article.save
+    @article = Article.new(article_params)
+    if @article.save
+      redirect_to articles_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update

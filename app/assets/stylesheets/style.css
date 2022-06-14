@@ -1,0 +1,31 @@
+.container {
+  width: 750px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar{
+  display: flex;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid .nav-link-home {
+  color: #777;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.container-fluid .nav-link {
+  text-decoration: none;
+  color: #777;
+}
